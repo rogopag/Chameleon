@@ -312,8 +312,8 @@ function area_manageScripts()
 	global $post, $wp, $wp_query;
 	
 	wp_enqueue_style('area-gallery-style', get_bloginfo('template_directory').'/gallery.css', '', '0.1', 'screen');
-	wp_enqueue_script ( 'area-js', get_bloginfo('template_directory') . '/js/js.js', array ('jquery' ), '0.1', 'screen' );
-	wp_localize_script ( 'area-js', 'Area', array ('site_url' => get_bloginfo('url'), 'template_dir' => get_bloginfo('template_directory'), 'page' => get_permalink ( $post->ID ), 'query' => $wp->query_vars, 'slug' => $post->post_name,  ) );
+	wp_enqueue_script ( 'area-gallery-js', get_bloginfo('template_directory') . '/js/gallery.js', array ('jquery' ), '0.1', 'screen' );
+	wp_localize_script ( 'area-gallery-js', 'Area', array ('site_url' => get_bloginfo('url'), 'template_dir' => get_bloginfo('template_directory'), 'page' => get_permalink ( $post->ID ), 'query' => $wp->query_vars, 'slug' => $post->post_name,  ) );
 }
 add_action('get_header', 'area_manageScripts');
 ?>

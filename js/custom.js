@@ -102,4 +102,18 @@ jQuery(document).ready(function(){
 	$comment_form.find('input#submit').click(function(){
 		if (jQuery("input#url").val() === jQuery("input#url").siblings('label').text()) jQuery("input#url").val("");
 	});
+	removeLinksToGalleriesFromSlides()	
 });
+
+function removeLinksToGalleriesFromSlides()
+{
+	if( jQuery(".slide").is('div') )
+	{
+		var a = jQuery('.ngg-album-compact h4 a');
+		a.css('text-decoration', 'none');
+		a.css('cursor', 'default');
+		a.click(function(){
+			return false;
+		});
+	}
+};
