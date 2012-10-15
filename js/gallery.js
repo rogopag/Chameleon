@@ -128,7 +128,7 @@ function startGalleryManager()
 						{
 							self.nextButton.fadeIn( self.FADE_FAST );
 						}
-						el.fadeIn(self.FADE_SLOW, function(){
+						el.fadeIn(self.FADE_FAST, function(){
 							//console.log( jq(this) );
 						});
 					});
@@ -165,7 +165,7 @@ function startGalleryManager()
 						{
 							self.nextButton.fadeIn( self.FADE_FAST );
 						}
-						el.fadeIn(self.FADE_SLOW, function(){
+						el.fadeIn(self.FADE_FAST, function(){
 								//console.log( jq(this) );
 						});
 					});
