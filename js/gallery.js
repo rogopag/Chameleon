@@ -27,6 +27,7 @@ function startGalleryManager()
 			nextButton: jq('<a class="nextButton" href="#"/>'),
 			prevButton: jq('<a class="prevButton" href="#"/>'),
 			closeButton: jq('<a class="closeButton" href="#" />'),
+			FADE_VERY_FAST:150,
 			FADE_FAST:300,
 			FADE_SLOW:600,
 			init:function()
@@ -128,7 +129,7 @@ function startGalleryManager()
 						{
 							self.nextButton.fadeIn( self.FADE_FAST );
 						}
-						el.fadeIn(self.FADE_FAST, function(){
+						el.fadeIn(self.FADE_VERY_FAST, function(){
 							//console.log( jq(this) );
 						});
 					});
@@ -165,7 +166,7 @@ function startGalleryManager()
 						{
 							self.nextButton.fadeIn( self.FADE_FAST );
 						}
-						el.fadeIn(self.FADE_FAST, function(){
+						el.fadeIn(self.FADE_VERY_FAST, function(){
 								//console.log( jq(this) );
 						});
 					});
