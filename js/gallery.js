@@ -28,7 +28,7 @@ function startGalleryManager()
 			prevButton: jq('<a class="prevButton" href="#"/>'),
 			closeButton: jq('<a class="closeButton" href="#" />'),
 			FADE_FAST:300,
-			FADE_SLOW:800,
+			FADE_SLOW:600,
 			init:function()
 			{
 				self = this;
@@ -128,11 +128,11 @@ function startGalleryManager()
 						{
 							self.nextButton.fadeIn( self.FADE_FAST );
 						}
+						el.fadeIn(self.FADE_SLOW, function(){
+							//console.log( jq(this) );
+						});
 					});
-					jq(this).fadeIn(self.FADE_SLOW, function(){
-						
-						
-					});
+					
 				});
 			});
 		},
@@ -153,6 +153,7 @@ function startGalleryManager()
 					img = self.updateImgSrc();
 					
 					var el = jq(this);
+					
 					img.load(function(){
 						el.center();
 						self.hideLoadingProgress();
@@ -164,11 +165,9 @@ function startGalleryManager()
 						{
 							self.nextButton.fadeIn( self.FADE_FAST );
 						}
-					});
-					
-					jq(this).fadeIn(self.FADE_SLOW, function(){
-							
-						
+						el.fadeIn(self.FADE_SLOW, function(){
+								//console.log( jq(this) );
+						});
 					});
 				});
 			});
