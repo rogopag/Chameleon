@@ -1,3 +1,9 @@
+/**
+ * @author Riccardo Strobbia
+ * @version 0.1
+ * @copyright Robanostra, 13 October, 2012
+ * @package AreaGallery
+ **/
 var Area, jq = jQuery.noConflict();
 
 jQuery(function(){
@@ -22,7 +28,7 @@ function startGalleryManager()
 			prevButton: jq('<a class="prevButton" href="#"/>'),
 			closeButton: jq('<a class="closeButton" href="#" />'),
 			FADE_FAST:300,
-			FADE_SLOW:600,
+			FADE_SLOW:800,
 			init:function()
 			{
 				self = this;
